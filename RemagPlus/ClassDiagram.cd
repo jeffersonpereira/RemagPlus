@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RemagPlus.ArquivoSefip">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\ArquivoSefip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RemagPlus.Classes.Controles">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAQAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Controles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RemagPlus.Classes.ComboPreenchido">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQARAAAEAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Classes\Controles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RemagPlus.Classes.Extensions">
+    <Position X="4" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAIAAEAA=</HashCode>
+      <FileName>Classes\Extensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RemagPlus.Funcoes">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAEAAgAAAGAAAAAQEAAAAAAAAAAAAgAIAAAAA=</HashCode>
+      <FileName>Classes\Funcoes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RemagPlus.Classes.Globals">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Globals.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RemagPlus.Classes.Mensagens">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAIBA=</HashCode>
+      <FileName>Classes\Globals.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="RemagPlus.TipoOperacao">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAgAAAAAAAAAAAAAAAAAAAAAAAAIAEAIAAAAAAAAAAQ=</HashCode>
+      <FileName>Classes\Funcoes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

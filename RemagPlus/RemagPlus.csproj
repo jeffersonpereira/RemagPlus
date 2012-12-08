@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30DCE9A1-A568-47F9-B05D-04892D6BAE34}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RemagPlus</RootNamespace>
+    <AssemblyName>RemagPlus</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\RemagPlus\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>ftp://www.webguirra.com/</SupportUrl>
+    <TargetCulture>pt-BR</TargetCulture>
+    <ProductName>Remag Plus</ProductName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F1802567DF5F39E420285B3F97D2D91202DC3C1C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RemagPlus_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\chart.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>RemagPlus.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ArquivoRemag.cs" />
+    <Compile Include="Classes\ArquivoSefip.cs" />
+    <Compile Include="Classes\ComboPreenchido.cs" />
+    <Compile Include="Classes\EstimativaReport.cs" />
+    <Compile Include="Classes\Extensions.cs" />
+    <Compile Include="Classes\Globals.cs" />
+    <Compile Include="Classes\Sefip\Registro00.cs" />
+    <Compile Include="Classes\Sefip\Registro10.cs" />
+    <Compile Include="Classes\Sefip\Registro30.cs" />
+    <Compile Include="Classes\Sefip\Registro90.cs" />
+    <Compile Include="Classes\ValidatedData.cs" />
+    <Compile Include="Formularios\frmAlteracaoSalarial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAlteracaoSalarial.Designer.cs">
+      <DependentUpon>frmAlteracaoSalarial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmConfiguracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConfiguracao.Designer.cs">
+      <DependentUpon>frmConfiguracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaValor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaValor.Designer.cs">
+      <DependentUpon>frmConsultaValor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEmpresa.Designer.cs">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFuncionario.Designer.cs">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmGeraRemag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmGeraRemag.Designer.cs">
+      <DependentUpon>frmGeraRemag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmResponsavel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmResponsavel.Designer.cs">
+      <DependentUpon>frmResponsavel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRptEstimativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRptEstimativa.Designer.cs">
+      <DependentUpon>frmRptEstimativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRptIndividualizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRptIndividualizacao.Designer.cs">
+      <DependentUpon>frmRptIndividualizacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRptListaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRptListaFuncionario.Designer.cs">
+      <DependentUpon>frmRptListaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRptSalarioMinimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRptSalarioMinimo.Designer.cs">
+      <DependentUpon>frmRptSalarioMinimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSalarioMinimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSalarioMinimo.Designer.cs">
+      <DependentUpon>frmSalarioMinimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSelecionaEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSelecionaEmpresa.Designer.cs">
+      <DependentUpon>frmSelecionaEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmIndividualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmIndividualizar.designer.cs">
+      <DependentUpon>frmIndividualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmGeraSefip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmGeraSefip.designer.cs">
+      <DependentUpon>frmGeraSefip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisa.Designer.cs">
+      <DependentUpon>frmPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCategoria.Designer.cs">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCBO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCBO.Designer.cs">
+      <DependentUpon>frmCBO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PesquisaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\PesquisaControl.Designer.cs">
+      <DependentUpon>PesquisaControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\RptEstimativa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\RptEstimativa.Designer.cs">
+      <DependentUpon>RptEstimativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\RptIndividualizacao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\RptIndividualizacao.Designer.cs">
+      <DependentUpon>RptIndividualizacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\RptListaFuncionario.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\RptListaFuncionario.Designer.cs">
+      <DependentUpon>RptListaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\RptSalarioMinimo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\RptSalarioMinimo.Designer.cs">
+      <DependentUpon>RptSalarioMinimo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formularios\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAlteracaoSalarial.resx">
+      <DependentUpon>frmAlteracaoSalarial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConfiguracao.resx">
+      <DependentUpon>frmConfiguracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConsultaValor.resx">
+      <DependentUpon>frmConsultaValor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEmpresa.resx">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmGeraRemag.resx">
+      <DependentUpon>frmGeraRemag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmResponsavel.resx">
+      <DependentUpon>frmResponsavel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRptEstimativa.resx">
+      <DependentUpon>frmRptEstimativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRptIndividualizacao.resx">
+      <DependentUpon>frmRptIndividualizacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRptListaFuncionario.resx">
+      <DependentUpon>frmRptListaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRptSalarioMinimo.resx">
+      <DependentUpon>frmRptSalarioMinimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSalarioMinimo.resx">
+      <DependentUpon>frmSalarioMinimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSelecionaEmpresa.resx">
+      <DependentUpon>frmSelecionaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmIndividualizar.resx">
+      <DependentUpon>frmIndividualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmGeraSefip.resx">
+      <DependentUpon>frmGeraSefip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPesquisa.resx">
+      <DependentUpon>frmPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCategoria.resx">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCBO.resx">
+      <DependentUpon>frmCBO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pesquisa.resx">
+      <DependentUpon>Pesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PesquisaControl.resx">
+      <DependentUpon>PesquisaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\RptEstimativa.resx">
+      <DependentUpon>RptEstimativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RptIndividualizacao.resx">
+      <DependentUpon>RptIndividualizacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RptListaFuncionario.resx">
+      <DependentUpon>RptListaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RptSalarioMinimo.resx">
+      <DependentUpon>RptSalarioMinimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\RemagLib.Data.remag_admissao_alfanumerica.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_admissao_numerica.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_categoria.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_categoria_empregador.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_cbo.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_codigo_movimentacao.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_configuracao.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_empresa.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_funcionario.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_individualizacao.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_municipio.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_responsavel.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_salario_minimo.datasource" />
+    <None Include="Properties\DataSources\RemagLib.Data.remag_usuario.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_admissao_alfanumerica.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_admissao_numerica.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_categoria.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_categoria_empregador.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_cbo.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_codigo_movimentacao.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_configuracao.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_empresa.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_funcionario.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_individualizacao.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_municipio.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_responsavel.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_salario_minimo.datasource" />
+    <None Include="Properties\DataSources\RemagLib.remag_usuario.datasource" />
+    <None Include="Properties\DataSources\RemagPlus.Classes.Estimativa.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RemagPlus_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="chart.ico" />
+    <Content Include="Dados.mdf" />
+    <Content Include="Dados_log.LDF">
+      <DependentUpon>Dados.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\boneco-certo.jpg" />
+    <None Include="Resources\BusinessIntelligence.jpg" />
+    <None Include="Resources\select.png" />
+    <None Include="Resources\edit_trash.png" />
+    <None Include="Resources\Trash.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\remag.jpg" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\seleciona.jpg" />
+    <None Include="Resources\seleciona3.jpg" />
+    <None Include="Resources\seleciona2.jpg" />
+    <None Include="Resources\seleciona1.jpg" />
+    <None Include="Resources\selecionar_empresa2.jpg" />
+    <None Include="Resources\chart.ico" />
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\principal.png" />
+    <None Include="Resources\selecao1.png" />
+    <None Include="Resources\selecao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RemagLib\RemagLib.csproj">
+      <Project>{D943AC08-AEAD-474F-B48D-865365506BA6}</Project>
+      <Name>RemagLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Validates\Validates.csproj">
+      <Project>{D684A0DB-44CD-422A-924B-007205B45D86}</Project>
+      <Name>Validates</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.XtraNavBar.v10.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DotClassUserControls">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

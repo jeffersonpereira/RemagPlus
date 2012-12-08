@@ -1,0 +1,1074 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RemagLib.Data.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="RemagLibDataStoreContainer">
+          <EntitySet Name="remag_admissao_alfanumerica" EntityType="RemagLib.Data.Store.remag_admissao_alfanumerica" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_admissao_numerica" EntityType="RemagLib.Data.Store.remag_admissao_numerica" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_categoria" EntityType="RemagLib.Data.Store.remag_categoria" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_categoria_empregador" EntityType="RemagLib.Data.Store.remag_categoria_empregador" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_cbo" EntityType="RemagLib.Data.Store.remag_cbo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_codigo_movimentacao" EntityType="RemagLib.Data.Store.remag_codigo_movimentacao" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_configuracao" EntityType="RemagLib.Data.Store.remag_configuracao" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_empresa" EntityType="RemagLib.Data.Store.remag_empresa" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_funcionario" EntityType="RemagLib.Data.Store.remag_funcionario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_individualizacao" EntityType="RemagLib.Data.Store.remag_individualizacao" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_municipio" EntityType="RemagLib.Data.Store.remag_municipio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_responsavel" EntityType="RemagLib.Data.Store.remag_responsavel" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_salario_minimo" EntityType="RemagLib.Data.Store.remag_salario_minimo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="remag_usuario" EntityType="RemagLib.Data.Store.remag_usuario" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="remag_admissao_alfanumerica_remag_funcionario" Association="RemagLib.Data.Store.remag_admissao_alfanumerica_remag_funcionario">
+            <End Role="remag_admissao_alfanumerica" EntitySet="remag_admissao_alfanumerica" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_admissao_numerica_remag_funcionario" Association="RemagLib.Data.Store.remag_admissao_numerica_remag_funcionario">
+            <End Role="remag_admissao_numerica" EntitySet="remag_admissao_numerica" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_categoria_empregador_remag_empresa" Association="RemagLib.Data.Store.remag_categoria_empregador_remag_empresa">
+            <End Role="remag_categoria_empregador" EntitySet="remag_categoria_empregador" />
+            <End Role="remag_empresa" EntitySet="remag_empresa" />
+          </AssociationSet>
+          <AssociationSet Name="remag_categoria_remag_funcionario" Association="RemagLib.Data.Store.remag_categoria_remag_funcionario">
+            <End Role="remag_categoria" EntitySet="remag_categoria" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_cbo_remag_funcionario" Association="RemagLib.Data.Store.remag_cbo_remag_funcionario">
+            <End Role="remag_cbo" EntitySet="remag_cbo" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_codigo_movimentacao_remag_funcionario" Association="RemagLib.Data.Store.remag_codigo_movimentacao_remag_funcionario">
+            <End Role="remag_codigo_movimentacao" EntitySet="remag_codigo_movimentacao" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_empresa_remag_funcionario" Association="RemagLib.Data.Store.remag_empresa_remag_funcionario">
+            <End Role="remag_empresa" EntitySet="remag_empresa" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_funcionario_remag_individualizacao" Association="RemagLib.Data.Store.remag_funcionario_remag_individualizacao">
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+            <End Role="remag_individualizacao" EntitySet="remag_individualizacao" />
+          </AssociationSet>
+          <AssociationSet Name="remag_municipio_remag_empresa" Association="RemagLib.Data.Store.remag_municipio_remag_empresa">
+            <End Role="remag_municipio" EntitySet="remag_municipio" />
+            <End Role="remag_empresa" EntitySet="remag_empresa" />
+          </AssociationSet>
+          <AssociationSet Name="remag_municipio_remag_funcionario" Association="RemagLib.Data.Store.remag_municipio_remag_funcionario">
+            <End Role="remag_municipio" EntitySet="remag_municipio" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_municipio_remag_responsavel" Association="RemagLib.Data.Store.remag_municipio_remag_responsavel">
+            <End Role="remag_municipio" EntitySet="remag_municipio" />
+            <End Role="remag_responsavel" EntitySet="remag_responsavel" />
+          </AssociationSet>
+          <AssociationSet Name="remag_responsavel_remag_empresa" Association="RemagLib.Data.Store.remag_responsavel_remag_empresa">
+            <End Role="remag_responsavel" EntitySet="remag_responsavel" />
+            <End Role="remag_empresa" EntitySet="remag_empresa" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="remag_admissao_alfanumerica">
+          <Key>
+            <PropertyRef Name="admissao_alfanumerica_id" />
+          </Key>
+          <Property Name="admissao_alfanumerica_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="codigo" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="remag_admissao_numerica">
+          <Key>
+            <PropertyRef Name="admissao_numerica_id" />
+          </Key>
+          <Property Name="admissao_numerica_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="codigo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="remag_categoria">
+          <Key>
+            <PropertyRef Name="categoria_id" />
+          </Key>
+          <Property Name="categoria_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="tipo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="remag_categoria_empregador">
+          <Key>
+            <PropertyRef Name="categoria_empregador_id" />
+          </Key>
+          <Property Name="categoria_empregador_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="tipo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="remag_cbo">
+          <Key>
+            <PropertyRef Name="cbo_id" />
+          </Key>
+          <Property Name="cbo_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="cbo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="remag_codigo_movimentacao">
+          <Key>
+            <PropertyRef Name="movimentacao_id" />
+          </Key>
+          <Property Name="movimentacao_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="codigo_movimentacao" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="remag_configuracao">
+          <Key>
+            <PropertyRef Name="configuracao_id" />
+          </Key>
+          <Property Name="configuracao_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="remag" Type="varchar" MaxLength="250" />
+          <Property Name="sefip" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="remag_empresa">
+          <Key>
+            <PropertyRef Name="empresa_id" />
+          </Key>
+          <Property Name="empresa_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="razao_social" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="tipo_inscricao" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="cnpj" Type="char" Nullable="false" MaxLength="14" />
+          <Property Name="endereco" Type="varchar" MaxLength="30" />
+          <Property Name="numero" Type="char" MaxLength="5" />
+          <Property Name="bairro" Type="varchar" MaxLength="20" />
+          <Property Name="cep" Type="char" MaxLength="8" />
+          <Property Name="telefone" Type="char" MaxLength="11" />
+          <Property Name="fax" Type="varchar" MaxLength="11" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
+          <Property Name="cnae" Type="int" Nullable="false" />
+          <Property Name="fpas" Type="int" Nullable="false" />
+          <Property Name="sat" Type="decimal" Nullable="false" Precision="9" Scale="4" />
+          <Property Name="responsavel_id" Type="int" Nullable="false" />
+          <Property Name="categoria_empregador_id" Type="int" Nullable="false" />
+          <Property Name="municipio_id" Type="int" Nullable="false" />
+          <Property Name="codigo_cef" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="remag_funcionario">
+          <Key>
+            <PropertyRef Name="funcionario_id" />
+          </Key>
+          <Property Name="funcionario_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="sexo" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="data_nascimento" Type="datetime" Nullable="false" />
+          <Property Name="cpf" Type="char" MaxLength="11" />
+          <Property Name="pis" Type="char" Nullable="false" MaxLength="11" />
+          <Property Name="ctps" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="serie" Type="char" Nullable="false" MaxLength="5" />
+          <Property Name="endereco" Type="varchar" MaxLength="30" />
+          <Property Name="numero" Type="char" MaxLength="5" />
+          <Property Name="cep" Type="char" MaxLength="8" />
+          <Property Name="telefone" Type="char" MaxLength="11" />
+          <Property Name="bairro" Type="varchar" MaxLength="20" />
+          <Property Name="data_admissao" Type="datetime" Nullable="false" />
+          <Property Name="optante" Type="bit" />
+          <Property Name="data_opcao" Type="datetime" Nullable="false" />
+          <Property Name="data_demissao" Type="datetime" />
+          <Property Name="remuneracao" Type="decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="empresa_id" Type="int" Nullable="false" />
+          <Property Name="categoria_id" Type="int" Nullable="false" />
+          <Property Name="movimentacao_id" Type="int" />
+          <Property Name="admissao_alfanumerica_id" Type="int" Nullable="false" />
+          <Property Name="cbo_id" Type="int" Nullable="false" />
+          <Property Name="admissao_numerica_id" Type="int" Nullable="false" />
+          <Property Name="municipio_id" Type="int" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="remag_individualizacao">
+          <Key>
+            <PropertyRef Name="invidualizacao_id" />
+          </Key>
+          <Property Name="invidualizacao_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="valor_jam" Type="decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="valor_deposito" Type="decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="valor_deposito13" Type="decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="competencia" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="data_individualizacao" Type="datetime" Nullable="false" />
+          <Property Name="funcionario_id" Type="int" Nullable="false" />
+          <Property Name="salario_minimo" Type="bit" Nullable="false" />
+          <Property Name="proporcional" Type="bit" Nullable="false" />
+          <Property Name="rateio" Type="bit" Nullable="false" />
+          <Property Name="base_calculo" Type="decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="data_recolhimento" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="remag_municipio">
+          <Key>
+            <PropertyRef Name="municipio_id" />
+          </Key>
+          <Property Name="municipio_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="uf" Type="char" Nullable="false" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="remag_responsavel">
+          <Key>
+            <PropertyRef Name="responsavel_id" />
+          </Key>
+          <Property Name="responsavel_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="tipo_inscricao" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="cnpj_cei_cpf" Type="char" Nullable="false" MaxLength="14" />
+          <Property Name="contato" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="telefone" Type="char" Nullable="false" MaxLength="11" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
+          <Property Name="endereco" Type="varchar" MaxLength="30" />
+          <Property Name="bairro" Type="varchar" MaxLength="20" />
+          <Property Name="municipio_id" Type="int" Nullable="false" />
+          <Property Name="cep" Type="char" MaxLength="8" />
+        </EntityType>
+        <EntityType Name="remag_salario_minimo">
+          <Key>
+            <PropertyRef Name="salario_minimo_id" />
+          </Key>
+          <Property Name="salario_minimo_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="valor" Type="decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="vigencia" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="remag_usuario">
+          <Key>
+            <PropertyRef Name="usuario_id" />
+          </Key>
+          <Property Name="usuario_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="login" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="senha" Type="varchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <Association Name="remag_admissao_alfanumerica_remag_funcionario">
+          <End Role="remag_admissao_alfanumerica" Type="RemagLib.Data.Store.remag_admissao_alfanumerica" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.Store.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_admissao_alfanumerica">
+              <PropertyRef Name="admissao_alfanumerica_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="admissao_alfanumerica_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_admissao_numerica_remag_funcionario">
+          <End Role="remag_admissao_numerica" Type="RemagLib.Data.Store.remag_admissao_numerica" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.Store.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_admissao_numerica">
+              <PropertyRef Name="admissao_numerica_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="admissao_numerica_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_categoria_empregador_remag_empresa">
+          <End Role="remag_categoria_empregador" Type="RemagLib.Data.Store.remag_categoria_empregador" Multiplicity="1" />
+          <End Role="remag_empresa" Type="RemagLib.Data.Store.remag_empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_categoria_empregador">
+              <PropertyRef Name="categoria_empregador_id" />
+            </Principal>
+            <Dependent Role="remag_empresa">
+              <PropertyRef Name="categoria_empregador_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_categoria_remag_funcionario">
+          <End Role="remag_categoria" Type="RemagLib.Data.Store.remag_categoria" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.Store.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_categoria">
+              <PropertyRef Name="categoria_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="categoria_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_cbo_remag_funcionario">
+          <End Role="remag_cbo" Type="RemagLib.Data.Store.remag_cbo" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.Store.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_cbo">
+              <PropertyRef Name="cbo_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="cbo_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_codigo_movimentacao_remag_funcionario">
+          <End Role="remag_codigo_movimentacao" Type="RemagLib.Data.Store.remag_codigo_movimentacao" Multiplicity="0..1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.Store.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_codigo_movimentacao">
+              <PropertyRef Name="movimentacao_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="movimentacao_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_empresa_remag_funcionario">
+          <End Role="remag_empresa" Type="RemagLib.Data.Store.remag_empresa" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.Store.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_empresa">
+              <PropertyRef Name="empresa_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="empresa_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_funcionario_remag_individualizacao">
+          <End Role="remag_funcionario" Type="RemagLib.Data.Store.remag_funcionario" Multiplicity="1" />
+          <End Role="remag_individualizacao" Type="RemagLib.Data.Store.remag_individualizacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_funcionario">
+              <PropertyRef Name="funcionario_id" />
+            </Principal>
+            <Dependent Role="remag_individualizacao">
+              <PropertyRef Name="funcionario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_municipio_remag_empresa">
+          <End Role="remag_municipio" Type="RemagLib.Data.Store.remag_municipio" Multiplicity="1" />
+          <End Role="remag_empresa" Type="RemagLib.Data.Store.remag_empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_municipio">
+              <PropertyRef Name="municipio_id" />
+            </Principal>
+            <Dependent Role="remag_empresa">
+              <PropertyRef Name="municipio_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_municipio_remag_funcionario">
+          <End Role="remag_municipio" Type="RemagLib.Data.Store.remag_municipio" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.Store.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_municipio">
+              <PropertyRef Name="municipio_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="municipio_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_municipio_remag_responsavel">
+          <End Role="remag_municipio" Type="RemagLib.Data.Store.remag_municipio" Multiplicity="1" />
+          <End Role="remag_responsavel" Type="RemagLib.Data.Store.remag_responsavel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_municipio">
+              <PropertyRef Name="municipio_id" />
+            </Principal>
+            <Dependent Role="remag_responsavel">
+              <PropertyRef Name="municipio_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_responsavel_remag_empresa">
+          <End Role="remag_responsavel" Type="RemagLib.Data.Store.remag_responsavel" Multiplicity="1" />
+          <End Role="remag_empresa" Type="RemagLib.Data.Store.remag_empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_responsavel">
+              <PropertyRef Name="responsavel_id" />
+            </Principal>
+            <Dependent Role="remag_empresa">
+              <PropertyRef Name="responsavel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RemagLib.Data" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="remag_admissao_alfanumerica" EntityType="RemagLib.Data.remag_admissao_alfanumerica" />
+          <EntitySet Name="remag_admissao_numerica" EntityType="RemagLib.Data.remag_admissao_numerica" />
+          <EntitySet Name="remag_categoria" EntityType="RemagLib.Data.remag_categoria" />
+          <EntitySet Name="remag_categoria_empregador" EntityType="RemagLib.Data.remag_categoria_empregador" />
+          <EntitySet Name="remag_cbo" EntityType="RemagLib.Data.remag_cbo" />
+          <EntitySet Name="remag_codigo_movimentacao" EntityType="RemagLib.Data.remag_codigo_movimentacao" />
+          <EntitySet Name="remag_configuracao" EntityType="RemagLib.Data.remag_configuracao" />
+          <EntitySet Name="remag_empresa" EntityType="RemagLib.Data.remag_empresa" />
+          <EntitySet Name="remag_funcionario" EntityType="RemagLib.Data.remag_funcionario" />
+          <EntitySet Name="remag_individualizacao" EntityType="RemagLib.Data.remag_individualizacao" />
+          <EntitySet Name="remag_municipio" EntityType="RemagLib.Data.remag_municipio" />
+          <EntitySet Name="remag_responsavel" EntityType="RemagLib.Data.remag_responsavel" />
+          <EntitySet Name="remag_salario_minimo" EntityType="RemagLib.Data.remag_salario_minimo" />
+          <EntitySet Name="remag_usuario" EntityType="RemagLib.Data.remag_usuario" />
+          <AssociationSet Name="remag_admissao_alfanumerica_remag_funcionario" Association="RemagLib.Data.remag_admissao_alfanumerica_remag_funcionario">
+            <End Role="remag_admissao_alfanumerica" EntitySet="remag_admissao_alfanumerica" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_admissao_numerica_remag_funcionario" Association="RemagLib.Data.remag_admissao_numerica_remag_funcionario">
+            <End Role="remag_admissao_numerica" EntitySet="remag_admissao_numerica" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_categoria_remag_funcionario" Association="RemagLib.Data.remag_categoria_remag_funcionario">
+            <End Role="remag_categoria" EntitySet="remag_categoria" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_categoria_empregador_remag_empresa" Association="RemagLib.Data.remag_categoria_empregador_remag_empresa">
+            <End Role="remag_categoria_empregador" EntitySet="remag_categoria_empregador" />
+            <End Role="remag_empresa" EntitySet="remag_empresa" />
+          </AssociationSet>
+          <AssociationSet Name="remag_cbo_remag_funcionario" Association="RemagLib.Data.remag_cbo_remag_funcionario">
+            <End Role="remag_cbo" EntitySet="remag_cbo" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_codigo_movimentacao_remag_funcionario" Association="RemagLib.Data.remag_codigo_movimentacao_remag_funcionario">
+            <End Role="remag_codigo_movimentacao" EntitySet="remag_codigo_movimentacao" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_empresa_remag_funcionario" Association="RemagLib.Data.remag_empresa_remag_funcionario">
+            <End Role="remag_empresa" EntitySet="remag_empresa" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_municipio_remag_empresa" Association="RemagLib.Data.remag_municipio_remag_empresa">
+            <End Role="remag_municipio" EntitySet="remag_municipio" />
+            <End Role="remag_empresa" EntitySet="remag_empresa" />
+          </AssociationSet>
+          <AssociationSet Name="remag_responsavel_remag_empresa" Association="RemagLib.Data.remag_responsavel_remag_empresa">
+            <End Role="remag_responsavel" EntitySet="remag_responsavel" />
+            <End Role="remag_empresa" EntitySet="remag_empresa" />
+          </AssociationSet>
+          <AssociationSet Name="remag_funcionario_remag_individualizacao" Association="RemagLib.Data.remag_funcionario_remag_individualizacao">
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+            <End Role="remag_individualizacao" EntitySet="remag_individualizacao" />
+          </AssociationSet>
+          <AssociationSet Name="remag_municipio_remag_funcionario" Association="RemagLib.Data.remag_municipio_remag_funcionario">
+            <End Role="remag_municipio" EntitySet="remag_municipio" />
+            <End Role="remag_funcionario" EntitySet="remag_funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="remag_municipio_remag_responsavel" Association="RemagLib.Data.remag_municipio_remag_responsavel">
+            <End Role="remag_municipio" EntitySet="remag_municipio" />
+            <End Role="remag_responsavel" EntitySet="remag_responsavel" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="remag_admissao_alfanumerica">
+          <Key>
+            <PropertyRef Name="admissao_alfanumerica_id" />
+          </Key>
+          <Property Name="admissao_alfanumerica_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="codigo" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="remag_funcionario" Relationship="RemagLib.Data.remag_admissao_alfanumerica_remag_funcionario" FromRole="remag_admissao_alfanumerica" ToRole="remag_funcionario" />
+        </EntityType>
+        <EntityType Name="remag_admissao_numerica">
+          <Key>
+            <PropertyRef Name="admissao_numerica_id" />
+          </Key>
+          <Property Name="admissao_numerica_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="codigo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="remag_funcionario" Relationship="RemagLib.Data.remag_admissao_numerica_remag_funcionario" FromRole="remag_admissao_numerica" ToRole="remag_funcionario" />
+        </EntityType>
+        <EntityType Name="remag_categoria">
+          <Key>
+            <PropertyRef Name="categoria_id" />
+          </Key>
+          <Property Name="categoria_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="tipo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="remag_funcionario" Relationship="RemagLib.Data.remag_categoria_remag_funcionario" FromRole="remag_categoria" ToRole="remag_funcionario" />
+        </EntityType>
+        <EntityType Name="remag_categoria_empregador">
+          <Key>
+            <PropertyRef Name="categoria_empregador_id" />
+          </Key>
+          <Property Name="categoria_empregador_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="tipo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="remag_empresa" Relationship="RemagLib.Data.remag_categoria_empregador_remag_empresa" FromRole="remag_categoria_empregador" ToRole="remag_empresa" />
+        </EntityType>
+        <EntityType Name="remag_cbo">
+          <Key>
+            <PropertyRef Name="cbo_id" />
+          </Key>
+          <Property Name="cbo_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="cbo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="remag_funcionario" Relationship="RemagLib.Data.remag_cbo_remag_funcionario" FromRole="remag_cbo" ToRole="remag_funcionario" />
+        </EntityType>
+        <EntityType Name="remag_codigo_movimentacao">
+          <Key>
+            <PropertyRef Name="movimentacao_id" />
+          </Key>
+          <Property Name="movimentacao_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="codigo_movimentacao" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="remag_funcionario" Relationship="RemagLib.Data.remag_codigo_movimentacao_remag_funcionario" FromRole="remag_codigo_movimentacao" ToRole="remag_funcionario" />
+        </EntityType>
+        <EntityType Name="remag_configuracao">
+          <Key>
+            <PropertyRef Name="configuracao_id" />
+          </Key>
+          <Property Name="configuracao_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="remag" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="sefip" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="remag_empresa">
+          <Key>
+            <PropertyRef Name="empresa_id" />
+          </Key>
+          <Property Name="empresa_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="razao_social" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="tipo_inscricao" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="cnpj" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="true" />
+          <Property Name="endereco" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="numero" Type="String" MaxLength="5" Unicode="false" FixedLength="true" />
+          <Property Name="bairro" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="cep" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="telefone" Type="String" MaxLength="11" Unicode="false" FixedLength="true" />
+          <Property Name="fax" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="cnae" Type="Int32" Nullable="false" />
+          <Property Name="fpas" Type="Int32" Nullable="false" />
+          <Property Name="sat" Type="Decimal" Nullable="false" Precision="9" Scale="4" />
+          <Property Name="responsavel_id" Type="Int32" Nullable="false" />
+          <Property Name="categoria_empregador_id" Type="Int32" Nullable="false" />
+          <Property Name="municipio_id" Type="Int32" Nullable="false" />
+          <Property Name="codigo_cef" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="remag_categoria_empregador" Relationship="RemagLib.Data.remag_categoria_empregador_remag_empresa" FromRole="remag_empresa" ToRole="remag_categoria_empregador" />
+          <NavigationProperty Name="remag_funcionario" Relationship="RemagLib.Data.remag_empresa_remag_funcionario" FromRole="remag_empresa" ToRole="remag_funcionario" />
+          <NavigationProperty Name="remag_municipio" Relationship="RemagLib.Data.remag_municipio_remag_empresa" FromRole="remag_empresa" ToRole="remag_municipio" />
+          <NavigationProperty Name="remag_responsavel" Relationship="RemagLib.Data.remag_responsavel_remag_empresa" FromRole="remag_empresa" ToRole="remag_responsavel" />
+        </EntityType>
+        <EntityType Name="remag_funcionario">
+          <Key>
+            <PropertyRef Name="funcionario_id" />
+          </Key>
+          <Property Name="funcionario_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sexo" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="data_nascimento" Type="DateTime" Nullable="false" />
+          <Property Name="cpf" Type="String" MaxLength="11" Unicode="false" FixedLength="true" />
+          <Property Name="pis" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="true" />
+          <Property Name="ctps" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="serie" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="true" />
+          <Property Name="endereco" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="numero" Type="String" MaxLength="5" Unicode="false" FixedLength="true" />
+          <Property Name="cep" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="telefone" Type="String" MaxLength="11" Unicode="false" FixedLength="true" />
+          <Property Name="bairro" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="data_admissao" Type="DateTime" Nullable="false" />
+          <Property Name="optante" Type="Boolean" />
+          <Property Name="data_opcao" Type="DateTime" Nullable="false" />
+          <Property Name="data_demissao" Type="DateTime" />
+          <Property Name="remuneracao" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="empresa_id" Type="Int32" Nullable="false" />
+          <Property Name="categoria_id" Type="Int32" Nullable="false" />
+          <Property Name="movimentacao_id" Type="Int32" />
+          <Property Name="admissao_alfanumerica_id" Type="Int32" Nullable="false" />
+          <Property Name="cbo_id" Type="Int32" Nullable="false" />
+          <Property Name="admissao_numerica_id" Type="Int32" Nullable="false" />
+          <Property Name="municipio_id" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="remag_admissao_alfanumerica" Relationship="RemagLib.Data.remag_admissao_alfanumerica_remag_funcionario" FromRole="remag_funcionario" ToRole="remag_admissao_alfanumerica" />
+          <NavigationProperty Name="remag_admissao_numerica" Relationship="RemagLib.Data.remag_admissao_numerica_remag_funcionario" FromRole="remag_funcionario" ToRole="remag_admissao_numerica" />
+          <NavigationProperty Name="remag_categoria" Relationship="RemagLib.Data.remag_categoria_remag_funcionario" FromRole="remag_funcionario" ToRole="remag_categoria" />
+          <NavigationProperty Name="remag_cbo" Relationship="RemagLib.Data.remag_cbo_remag_funcionario" FromRole="remag_funcionario" ToRole="remag_cbo" />
+          <NavigationProperty Name="remag_codigo_movimentacao" Relationship="RemagLib.Data.remag_codigo_movimentacao_remag_funcionario" FromRole="remag_funcionario" ToRole="remag_codigo_movimentacao" />
+          <NavigationProperty Name="remag_empresa" Relationship="RemagLib.Data.remag_empresa_remag_funcionario" FromRole="remag_funcionario" ToRole="remag_empresa" />
+          <NavigationProperty Name="remag_individualizacao" Relationship="RemagLib.Data.remag_funcionario_remag_individualizacao" FromRole="remag_funcionario" ToRole="remag_individualizacao" />
+          <NavigationProperty Name="remag_municipio" Relationship="RemagLib.Data.remag_municipio_remag_funcionario" FromRole="remag_funcionario" ToRole="remag_municipio" />
+        </EntityType>
+        <EntityType Name="remag_individualizacao">
+          <Key>
+            <PropertyRef Name="invidualizacao_id" />
+          </Key>
+          <Property Name="invidualizacao_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="valor_jam" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="valor_deposito" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="valor_deposito13" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="competencia" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="data_individualizacao" Type="DateTime" Nullable="false" />
+          <Property Name="funcionario_id" Type="Int32" Nullable="false" />
+          <Property Name="salario_minimo" Type="Boolean" Nullable="false" />
+          <Property Name="proporcional" Type="Boolean" Nullable="false" />
+          <Property Name="rateio" Type="Boolean" Nullable="false" />
+          <Property Name="base_calculo" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="data_recolhimento" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="remag_funcionario" Relationship="RemagLib.Data.remag_funcionario_remag_individualizacao" FromRole="remag_individualizacao" ToRole="remag_funcionario" />
+        </EntityType>
+        <EntityType Name="remag_municipio">
+          <Key>
+            <PropertyRef Name="municipio_id" />
+          </Key>
+          <Property Name="municipio_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="uf" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="remag_empresa" Relationship="RemagLib.Data.remag_municipio_remag_empresa" FromRole="remag_municipio" ToRole="remag_empresa" />
+          <NavigationProperty Name="remag_funcionario" Relationship="RemagLib.Data.remag_municipio_remag_funcionario" FromRole="remag_municipio" ToRole="remag_funcionario" />
+          <NavigationProperty Name="remag_responsavel" Relationship="RemagLib.Data.remag_municipio_remag_responsavel" FromRole="remag_municipio" ToRole="remag_responsavel" />
+        </EntityType>
+        <EntityType Name="remag_responsavel">
+          <Key>
+            <PropertyRef Name="responsavel_id" />
+          </Key>
+          <Property Name="responsavel_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="tipo_inscricao" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="cnpj_cei_cpf" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="true" />
+          <Property Name="contato" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="telefone" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="true" />
+          <Property Name="email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="endereco" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="bairro" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="municipio_id" Type="Int32" Nullable="false" />
+          <Property Name="cep" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="remag_empresa" Relationship="RemagLib.Data.remag_responsavel_remag_empresa" FromRole="remag_responsavel" ToRole="remag_empresa" />
+          <NavigationProperty Name="remag_municipio" Relationship="RemagLib.Data.remag_municipio_remag_responsavel" FromRole="remag_responsavel" ToRole="remag_municipio" />
+        </EntityType>
+        <EntityType Name="remag_salario_minimo">
+          <Key>
+            <PropertyRef Name="salario_minimo_id" />
+          </Key>
+          <Property Name="salario_minimo_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="valor" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+          <Property Name="vigencia" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="remag_usuario">
+          <Key>
+            <PropertyRef Name="usuario_id" />
+          </Key>
+          <Property Name="usuario_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="login" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="senha" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <Association Name="remag_admissao_alfanumerica_remag_funcionario">
+          <End Role="remag_admissao_alfanumerica" Type="RemagLib.Data.remag_admissao_alfanumerica" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_admissao_alfanumerica">
+              <PropertyRef Name="admissao_alfanumerica_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="admissao_alfanumerica_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_admissao_numerica_remag_funcionario">
+          <End Role="remag_admissao_numerica" Type="RemagLib.Data.remag_admissao_numerica" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_admissao_numerica">
+              <PropertyRef Name="admissao_numerica_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="admissao_numerica_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_categoria_remag_funcionario">
+          <End Role="remag_categoria" Type="RemagLib.Data.remag_categoria" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_categoria">
+              <PropertyRef Name="categoria_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="categoria_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_categoria_empregador_remag_empresa">
+          <End Role="remag_categoria_empregador" Type="RemagLib.Data.remag_categoria_empregador" Multiplicity="1" />
+          <End Role="remag_empresa" Type="RemagLib.Data.remag_empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_categoria_empregador">
+              <PropertyRef Name="categoria_empregador_id" />
+            </Principal>
+            <Dependent Role="remag_empresa">
+              <PropertyRef Name="categoria_empregador_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_cbo_remag_funcionario">
+          <End Role="remag_cbo" Type="RemagLib.Data.remag_cbo" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_cbo">
+              <PropertyRef Name="cbo_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="cbo_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_codigo_movimentacao_remag_funcionario">
+          <End Role="remag_codigo_movimentacao" Type="RemagLib.Data.remag_codigo_movimentacao" Multiplicity="0..1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_codigo_movimentacao">
+              <PropertyRef Name="movimentacao_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="movimentacao_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_empresa_remag_funcionario">
+          <End Role="remag_empresa" Type="RemagLib.Data.remag_empresa" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_empresa">
+              <PropertyRef Name="empresa_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="empresa_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_municipio_remag_empresa">
+          <End Role="remag_municipio" Type="RemagLib.Data.remag_municipio" Multiplicity="1" />
+          <End Role="remag_empresa" Type="RemagLib.Data.remag_empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_municipio">
+              <PropertyRef Name="municipio_id" />
+            </Principal>
+            <Dependent Role="remag_empresa">
+              <PropertyRef Name="municipio_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_responsavel_remag_empresa">
+          <End Role="remag_responsavel" Type="RemagLib.Data.remag_responsavel" Multiplicity="1" />
+          <End Role="remag_empresa" Type="RemagLib.Data.remag_empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_responsavel">
+              <PropertyRef Name="responsavel_id" />
+            </Principal>
+            <Dependent Role="remag_empresa">
+              <PropertyRef Name="responsavel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_funcionario_remag_individualizacao">
+          <End Role="remag_funcionario" Type="RemagLib.Data.remag_funcionario" Multiplicity="1" />
+          <End Role="remag_individualizacao" Type="RemagLib.Data.remag_individualizacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_funcionario">
+              <PropertyRef Name="funcionario_id" />
+            </Principal>
+            <Dependent Role="remag_individualizacao">
+              <PropertyRef Name="funcionario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_municipio_remag_funcionario">
+          <End Role="remag_municipio" Type="RemagLib.Data.remag_municipio" Multiplicity="1" />
+          <End Role="remag_funcionario" Type="RemagLib.Data.remag_funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_municipio">
+              <PropertyRef Name="municipio_id" />
+            </Principal>
+            <Dependent Role="remag_funcionario">
+              <PropertyRef Name="municipio_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="remag_municipio_remag_responsavel">
+          <End Role="remag_municipio" Type="RemagLib.Data.remag_municipio" Multiplicity="1" />
+          <End Role="remag_responsavel" Type="RemagLib.Data.remag_responsavel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="remag_municipio">
+              <PropertyRef Name="municipio_id" />
+            </Principal>
+            <Dependent Role="remag_responsavel">
+              <PropertyRef Name="municipio_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RemagLibDataStoreContainer" CdmEntityContainer="DataEntities">
+          <EntitySetMapping Name="remag_admissao_alfanumerica">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_admissao_alfanumerica">
+              <MappingFragment StoreEntitySet="remag_admissao_alfanumerica">
+                <ScalarProperty Name="admissao_alfanumerica_id" ColumnName="admissao_alfanumerica_id" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_admissao_numerica">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_admissao_numerica">
+              <MappingFragment StoreEntitySet="remag_admissao_numerica">
+                <ScalarProperty Name="admissao_numerica_id" ColumnName="admissao_numerica_id" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_categoria">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_categoria">
+              <MappingFragment StoreEntitySet="remag_categoria">
+                <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_categoria_empregador">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_categoria_empregador">
+              <MappingFragment StoreEntitySet="remag_categoria_empregador">
+                <ScalarProperty Name="categoria_empregador_id" ColumnName="categoria_empregador_id" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_cbo">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_cbo">
+              <MappingFragment StoreEntitySet="remag_cbo">
+                <ScalarProperty Name="cbo_id" ColumnName="cbo_id" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="cbo" ColumnName="cbo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_codigo_movimentacao">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_codigo_movimentacao">
+              <MappingFragment StoreEntitySet="remag_codigo_movimentacao">
+                <ScalarProperty Name="movimentacao_id" ColumnName="movimentacao_id" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="codigo_movimentacao" ColumnName="codigo_movimentacao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_configuracao">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_configuracao">
+              <MappingFragment StoreEntitySet="remag_configuracao">
+                <ScalarProperty Name="configuracao_id" ColumnName="configuracao_id" />
+                <ScalarProperty Name="remag" ColumnName="remag" />
+                <ScalarProperty Name="sefip" ColumnName="sefip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_empresa">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_empresa">
+              <MappingFragment StoreEntitySet="remag_empresa">
+                <ScalarProperty Name="empresa_id" ColumnName="empresa_id" />
+                <ScalarProperty Name="razao_social" ColumnName="razao_social" />
+                <ScalarProperty Name="tipo_inscricao" ColumnName="tipo_inscricao" />
+                <ScalarProperty Name="cnpj" ColumnName="cnpj" />
+                <ScalarProperty Name="endereco" ColumnName="endereco" />
+                <ScalarProperty Name="numero" ColumnName="numero" />
+                <ScalarProperty Name="bairro" ColumnName="bairro" />
+                <ScalarProperty Name="cep" ColumnName="cep" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="fax" ColumnName="fax" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="cnae" ColumnName="cnae" />
+                <ScalarProperty Name="fpas" ColumnName="fpas" />
+                <ScalarProperty Name="sat" ColumnName="sat" />
+                <ScalarProperty Name="responsavel_id" ColumnName="responsavel_id" />
+                <ScalarProperty Name="categoria_empregador_id" ColumnName="categoria_empregador_id" />
+                <ScalarProperty Name="municipio_id" ColumnName="municipio_id" />
+                <ScalarProperty Name="codigo_cef" ColumnName="codigo_cef" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_funcionario">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_funcionario">
+              <MappingFragment StoreEntitySet="remag_funcionario">
+                <ScalarProperty Name="funcionario_id" ColumnName="funcionario_id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="data_nascimento" ColumnName="data_nascimento" />
+                <ScalarProperty Name="cpf" ColumnName="cpf" />
+                <ScalarProperty Name="pis" ColumnName="pis" />
+                <ScalarProperty Name="ctps" ColumnName="ctps" />
+                <ScalarProperty Name="serie" ColumnName="serie" />
+                <ScalarProperty Name="endereco" ColumnName="endereco" />
+                <ScalarProperty Name="numero" ColumnName="numero" />
+                <ScalarProperty Name="cep" ColumnName="cep" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="bairro" ColumnName="bairro" />
+                <ScalarProperty Name="data_admissao" ColumnName="data_admissao" />
+                <ScalarProperty Name="optante" ColumnName="optante" />
+                <ScalarProperty Name="data_opcao" ColumnName="data_opcao" />
+                <ScalarProperty Name="data_demissao" ColumnName="data_demissao" />
+                <ScalarProperty Name="remuneracao" ColumnName="remuneracao" />
+                <ScalarProperty Name="empresa_id" ColumnName="empresa_id" />
+                <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+                <ScalarProperty Name="movimentacao_id" ColumnName="movimentacao_id" />
+                <ScalarProperty Name="admissao_alfanumerica_id" ColumnName="admissao_alfanumerica_id" />
+                <ScalarProperty Name="cbo_id" ColumnName="cbo_id" />
+                <ScalarProperty Name="admissao_numerica_id" ColumnName="admissao_numerica_id" />
+                <ScalarProperty Name="municipio_id" ColumnName="municipio_id" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_individualizacao">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_individualizacao">
+              <MappingFragment StoreEntitySet="remag_individualizacao">
+                <ScalarProperty Name="invidualizacao_id" ColumnName="invidualizacao_id" />
+                <ScalarProperty Name="valor_jam" ColumnName="valor_jam" />
+                <ScalarProperty Name="valor_deposito" ColumnName="valor_deposito" />
+                <ScalarProperty Name="valor_deposito13" ColumnName="valor_deposito13" />
+                <ScalarProperty Name="competencia" ColumnName="competencia" />
+                <ScalarProperty Name="data_individualizacao" ColumnName="data_individualizacao" />
+                <ScalarProperty Name="funcionario_id" ColumnName="funcionario_id" />
+                <ScalarProperty Name="salario_minimo" ColumnName="salario_minimo" />
+                <ScalarProperty Name="proporcional" ColumnName="proporcional" />
+                <ScalarProperty Name="rateio" ColumnName="rateio" />
+                <ScalarProperty Name="base_calculo" ColumnName="base_calculo" />
+                <ScalarProperty Name="data_recolhimento" ColumnName="data_recolhimento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_municipio">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_municipio">
+              <MappingFragment StoreEntitySet="remag_municipio">
+                <ScalarProperty Name="municipio_id" ColumnName="municipio_id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="uf" ColumnName="uf" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_responsavel">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_responsavel">
+              <MappingFragment StoreEntitySet="remag_responsavel">
+                <ScalarProperty Name="responsavel_id" ColumnName="responsavel_id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="tipo_inscricao" ColumnName="tipo_inscricao" />
+                <ScalarProperty Name="cnpj_cei_cpf" ColumnName="cnpj_cei_cpf" />
+                <ScalarProperty Name="contato" ColumnName="contato" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="endereco" ColumnName="endereco" />
+                <ScalarProperty Name="bairro" ColumnName="bairro" />
+                <ScalarProperty Name="municipio_id" ColumnName="municipio_id" />
+                <ScalarProperty Name="cep" ColumnName="cep" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_salario_minimo">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_salario_minimo">
+              <MappingFragment StoreEntitySet="remag_salario_minimo">
+                <ScalarProperty Name="salario_minimo_id" ColumnName="salario_minimo_id" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+                <ScalarProperty Name="vigencia" ColumnName="vigencia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="remag_usuario">
+            <EntityTypeMapping TypeName="RemagLib.Data.remag_usuario">
+              <MappingFragment StoreEntitySet="remag_usuario">
+                <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="senha" ColumnName="senha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="DataModel">
+        <EntityTypeShape EntityType="RemagLib.Data.remag_admissao_alfanumerica" Width="1.5" PointX="5.25" PointY="4.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_admissao_numerica" Width="1.5" PointX="5.25" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_categoria" Width="1.5" PointX="5.25" PointY="15.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_categoria_empregador" Width="1.5" PointX="3" PointY="9.125" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_cbo" Width="1.5" PointX="5.25" PointY="17.875" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_codigo_movimentacao" Width="1.5" PointX="5.25" PointY="20.375" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_configuracao" Width="1.5" PointX="0.75" PointY="1.125" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_empresa" Width="1.5" PointX="5.25" PointY="8.5" Height="5.2494108072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_funcionario" Width="1.5" PointX="7.5" PointY="6.375" Height="7.5570279947916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_individualizacao" Width="1.5" PointX="9.75" PointY="8.375" Height="3.518697916666671" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_municipio" Width="1.5" PointX="0.75" PointY="6.625" Height="2.1725878906250022" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_responsavel" Width="1.5" PointX="3" PointY="12" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_salario_minimo" Width="1.5" PointX="0.75" PointY="4.125" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="RemagLib.Data.remag_usuario" Width="1.5" PointX="7.75" PointY="1.125" Height="1.7879850260416674" IsExpanded="true" />
+        <AssociationConnector Association="RemagLib.Data.remag_admissao_alfanumerica_remag_funcionario" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="5.1439925130208337" />
+          <ConnectorPoint PointX="7.510416666666667" PointY="5.1439925130208328" />
+          <ConnectorPoint PointX="7.677083333333333" PointY="5.1439925130208337" />
+          <ConnectorPoint PointX="8.25" PointY="5.1439925130208337" />
+          <ConnectorPoint PointX="8.25" PointY="6.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="RemagLib.Data.remag_admissao_numerica_remag_funcionario" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="0.90625" />
+          <ConnectorPoint PointX="7.59375" PointY="0.90625" />
+          <ConnectorPoint PointX="7.59375" PointY="6.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="RemagLib.Data.remag_categoria_remag_funcionario" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="16.143992513020834" />
+          <ConnectorPoint PointX="7.7604141666666671" PointY="16.143992513020834" />
+          <ConnectorPoint PointX="7.9270808333333331" PointY="16.143992513020834" />
+          <ConnectorPoint PointX="8.25" PointY="16.143992513020834" />
+          <ConnectorPoint PointX="8.25" PointY="13.932027994791667" />
+        </AssociationConnector>
+        <AssociationConnector Association="RemagLib.Data.remag_categoria_empregador_remag_empresa" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="10.018992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="10.018992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="RemagLib.Data.remag_cbo_remag_funcionario" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="18.768992513020834" />
+          <ConnectorPoint PointX="7.8437475" PointY="18.768992513020834" />
+          <ConnectorPoint PointX="7.8437475" PointY="13.932027994791667" />
+        </AssociationConnector>
+        <AssociationConnector Association="RemagLib.Data.remag_codigo_movimentacao_remag_funcionario" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="21.268992513020834" />
+          <ConnectorPoint PointX="8.6562525" PointY="21.268992513020834" />
+          <ConnectorPoint PointX="8.6562525" PointY="13.932027994791667" />
+        </AssociationConnector>
+        <AssociationConnector Association="RemagLib.Data.remag_empresa_remag_funcionario" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="11.124705403645834" />
+          <ConnectorPoint PointX="7.5" PointY="11.124705403645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="RemagLib.Data.remag_municipio_remag_empresa" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.5624995" />
+          <ConnectorPoint PointX="6" PointY="7.5624995" />
+          <ConnectorPoint PointX="6" PointY="8.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="RemagLib.Data.remag_responsavel_remag_empresa" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="12.874705403645834" />
+          <ConnectorPoint PointX="5.25" PointY="12.874705403645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="RemagLib.Data.remag_funcionario_remag_individualizacao" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="10.134348958333336" />
+          <ConnectorPoint PointX="9.75" PointY="10.134348958333336" />
+        </AssociationConnector>
+        <AssociationConnector Association="RemagLib.Data.remag_municipio_remag_funcionario" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.0312497500000006" />
+          <ConnectorPoint PointX="7.5" PointY="7.0312497500000006" />
+        </AssociationConnector>
+        <AssociationConnector Association="RemagLib.Data.remag_municipio_remag_responsavel" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="8.7975878906250031" />
+          <ConnectorPoint PointX="1.5" PointY="13.759348958333334" />
+          <ConnectorPoint PointX="3" PointY="13.759348958333334" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
