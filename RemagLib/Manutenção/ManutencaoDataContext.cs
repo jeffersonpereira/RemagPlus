@@ -9,6 +9,37 @@ namespace RemagLib
 {
     public partial class DataEntities
     {
+        public void CriarDadosPadroes()
+        {
+            remag_usuario usuario = new remag_usuario();
+            this.AddToremag_usuario(usuario);
+            usuario.login = "demo";
+            usuario.nome = "Demonstração";
+            usuario.Senha = "1";
+
+            remag_responsavel responsavel = new remag_responsavel();
+            responsavel.nome = "demo";
+            responsavel.cnpj_cei_cpf = "53429812000113";
+            responsavel.remag_municipio = this.remag_municipio.First();
+            responsavel.tipo_inscricao = "CNPJ";
+            responsavel.bairro = "demo";
+            responsavel.endereco = "demo";
+            responsavel.email = "demo@demo.com";
+            responsavel.cep = "40000000";
+            responsavel.contato = "demo";
+            responsavel.telefone = "7133333333";
+            this.AddToremag_responsavel(responsavel);
+
+            remag_empresa empresa = new remag_empresa();
+            empresa.remag_categoria_empregador = this.remag_categoria_empregador.First();
+            empresa.remag_responsavel = responsavel;
+            empresa.remag_municipio = this.remag_municipio.First();
+            empresa.razao_social = "EMPRESA DEMOSNTRAÇÃO";
+            empresa.tipo_inscricao = "CNPJ";
+            empresa.cnpj = "53429812000113";
+            this.SaveChanges();
+        }
+
         public int DeletarIndividualizacao(remag_empresa empresa, DateTime competencia, DateTime recolhimento)
         {
             string compe = competencia.ToString("MM/yyyy");
@@ -119,7 +150,7 @@ namespace RemagLib
             return funcionario;
         }
         /// <summary>
-        /// Lista de funcionário por período
+        /// Lista de funcionário com individualização
         /// </summary>
         /// <returns></returns>
         public IList<remag_funcionario> GetFuncionarioDados(remag_empresa empresa)

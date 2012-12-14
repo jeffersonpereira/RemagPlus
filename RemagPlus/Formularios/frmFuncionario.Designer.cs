@@ -57,6 +57,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pesquisaControlCidade = new RemagPlus.PesquisaControl();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.telefoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.numeroTextBox = new System.Windows.Forms.TextBox();
@@ -64,11 +65,16 @@
             this.bairroTextBox = new System.Windows.Forms.TextBox();
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pesquisaControlCbo = new RemagPlus.PesquisaControl();
+            this.pesquisaControlAdmissaoNumerica = new RemagPlus.PesquisaControl();
+            this.pesquisaControlAdmissaoAlfa = new RemagPlus.PesquisaControl();
+            this.pesquisaControlCategoria = new RemagPlus.PesquisaControl();
             this.checkBoxOptante = new System.Windows.Forms.CheckBox();
             this.maskedTextBoxOpcao = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxAdmissao = new System.Windows.Forms.MaskedTextBox();
             this.remuneracaoTextBox = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pesquisaControlMovimento = new RemagPlus.PesquisaControl();
             this.data_demissaoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.labelJam = new System.Windows.Forms.Label();
@@ -89,12 +95,6 @@
             this.bindingSourceIndividualizacao = new System.Windows.Forms.BindingSource(this.components);
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pesquisaControlCidade = new RemagPlus.PesquisaControl();
-            this.pesquisaControlCategoria = new RemagPlus.PesquisaControl();
-            this.pesquisaControlAdmissaoAlfa = new RemagPlus.PesquisaControl();
-            this.pesquisaControlAdmissaoNumerica = new RemagPlus.PesquisaControl();
-            this.pesquisaControlCbo = new RemagPlus.PesquisaControl();
-            this.pesquisaControlMovimento = new RemagPlus.PesquisaControl();
             pisLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             sexoLabel = new System.Windows.Forms.Label();
@@ -403,6 +403,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Endereço / Contato";
             // 
+            // pesquisaControlCidade
+            // 
+            this.pesquisaControlCidade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pesquisaControlCidade.Location = new System.Drawing.Point(6, 60);
+            this.pesquisaControlCidade.Name = "pesquisaControlCidade";
+            this.pesquisaControlCidade.Size = new System.Drawing.Size(312, 41);
+            this.pesquisaControlCidade.TabIndex = 11;
+            // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceFuncionario, "email", true));
@@ -489,6 +497,38 @@
             this.tabPage2.Text = "Admissão";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // pesquisaControlCbo
+            // 
+            this.pesquisaControlCbo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pesquisaControlCbo.Location = new System.Drawing.Point(6, 91);
+            this.pesquisaControlCbo.Name = "pesquisaControlCbo";
+            this.pesquisaControlCbo.Size = new System.Drawing.Size(312, 41);
+            this.pesquisaControlCbo.TabIndex = 49;
+            // 
+            // pesquisaControlAdmissaoNumerica
+            // 
+            this.pesquisaControlAdmissaoNumerica.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pesquisaControlAdmissaoNumerica.Location = new System.Drawing.Point(324, 49);
+            this.pesquisaControlAdmissaoNumerica.Name = "pesquisaControlAdmissaoNumerica";
+            this.pesquisaControlAdmissaoNumerica.Size = new System.Drawing.Size(312, 41);
+            this.pesquisaControlAdmissaoNumerica.TabIndex = 48;
+            // 
+            // pesquisaControlAdmissaoAlfa
+            // 
+            this.pesquisaControlAdmissaoAlfa.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pesquisaControlAdmissaoAlfa.Location = new System.Drawing.Point(6, 48);
+            this.pesquisaControlAdmissaoAlfa.Name = "pesquisaControlAdmissaoAlfa";
+            this.pesquisaControlAdmissaoAlfa.Size = new System.Drawing.Size(312, 41);
+            this.pesquisaControlAdmissaoAlfa.TabIndex = 47;
+            // 
+            // pesquisaControlCategoria
+            // 
+            this.pesquisaControlCategoria.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pesquisaControlCategoria.Location = new System.Drawing.Point(324, 6);
+            this.pesquisaControlCategoria.Name = "pesquisaControlCategoria";
+            this.pesquisaControlCategoria.Size = new System.Drawing.Size(312, 41);
+            this.pesquisaControlCategoria.TabIndex = 7;
+            // 
             // checkBoxOptante
             // 
             this.checkBoxOptante.AutoSize = true;
@@ -544,6 +584,14 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Movimentação";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // pesquisaControlMovimento
+            // 
+            this.pesquisaControlMovimento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pesquisaControlMovimento.Location = new System.Drawing.Point(6, 8);
+            this.pesquisaControlMovimento.Name = "pesquisaControlMovimento";
+            this.pesquisaControlMovimento.Size = new System.Drawing.Size(312, 41);
+            this.pesquisaControlMovimento.TabIndex = 48;
             // 
             // data_demissaoMaskedTextBox
             // 
@@ -737,54 +785,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.DataSource = this.bindingSourceFuncionario;
-            // 
-            // pesquisaControlCidade
-            // 
-            this.pesquisaControlCidade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pesquisaControlCidade.Location = new System.Drawing.Point(6, 60);
-            this.pesquisaControlCidade.Name = "pesquisaControlCidade";
-            this.pesquisaControlCidade.Size = new System.Drawing.Size(312, 41);
-            this.pesquisaControlCidade.TabIndex = 11;
-            // 
-            // pesquisaControlCategoria
-            // 
-            this.pesquisaControlCategoria.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pesquisaControlCategoria.Location = new System.Drawing.Point(324, 6);
-            this.pesquisaControlCategoria.Name = "pesquisaControlCategoria";
-            this.pesquisaControlCategoria.Size = new System.Drawing.Size(312, 41);
-            this.pesquisaControlCategoria.TabIndex = 7;
-            // 
-            // pesquisaControlAdmissaoAlfa
-            // 
-            this.pesquisaControlAdmissaoAlfa.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pesquisaControlAdmissaoAlfa.Location = new System.Drawing.Point(6, 48);
-            this.pesquisaControlAdmissaoAlfa.Name = "pesquisaControlAdmissaoAlfa";
-            this.pesquisaControlAdmissaoAlfa.Size = new System.Drawing.Size(312, 41);
-            this.pesquisaControlAdmissaoAlfa.TabIndex = 47;
-            // 
-            // pesquisaControlAdmissaoNumerica
-            // 
-            this.pesquisaControlAdmissaoNumerica.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pesquisaControlAdmissaoNumerica.Location = new System.Drawing.Point(324, 49);
-            this.pesquisaControlAdmissaoNumerica.Name = "pesquisaControlAdmissaoNumerica";
-            this.pesquisaControlAdmissaoNumerica.Size = new System.Drawing.Size(312, 41);
-            this.pesquisaControlAdmissaoNumerica.TabIndex = 48;
-            // 
-            // pesquisaControlCbo
-            // 
-            this.pesquisaControlCbo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pesquisaControlCbo.Location = new System.Drawing.Point(6, 91);
-            this.pesquisaControlCbo.Name = "pesquisaControlCbo";
-            this.pesquisaControlCbo.Size = new System.Drawing.Size(312, 41);
-            this.pesquisaControlCbo.TabIndex = 49;
-            // 
-            // pesquisaControlMovimento
-            // 
-            this.pesquisaControlMovimento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pesquisaControlMovimento.Location = new System.Drawing.Point(6, 8);
-            this.pesquisaControlMovimento.Name = "pesquisaControlMovimento";
-            this.pesquisaControlMovimento.Size = new System.Drawing.Size(312, 41);
-            this.pesquisaControlMovimento.TabIndex = 48;
             // 
             // frmFuncionario
             // 

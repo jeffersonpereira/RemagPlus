@@ -21,7 +21,7 @@ namespace RemagPlus.Formularios
 
         protected override void Pesquisa()
         {
-            Pesquisa<remag_salario_minimo> pesquisa = new Pesquisa<remag_salario_minimo>(dataContext, "remag_salario_minimo", new string[] { "cbo", "descricao" }, new int[] { 100, 250 }, new string[] { "CBO", "Descrição" }, "Classificação Brasileira de Ocupação", true);
+            Pesquisa<remag_salario_minimo> pesquisa = new Pesquisa<remag_salario_minimo>(dataContext, "remag_salario_minimo", new string[] { "valor", "vogencia" }, new int[] { 100, 250 }, new string[] { "Valor", "Vigência" }, "Salário Mínimo", true);
             if (pesquisa.ShowDialog() == DialogResult.OK)
             {
                 if (pesquisa._entity != null)

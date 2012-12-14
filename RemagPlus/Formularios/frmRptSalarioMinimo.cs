@@ -24,7 +24,7 @@ namespace RemagPlus.Formularios
             List<remag_salario_minimo> salario = new List<remag_salario_minimo>();
             if (this.radioButtonTodos.Checked)
             {
-                salario = dataContext.GetSalarioMinimo();
+                salario = dataContext.remag_salario_minimo.ToList();
             }
             else
             {

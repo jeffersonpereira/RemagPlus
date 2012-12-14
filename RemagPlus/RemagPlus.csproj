@@ -29,7 +29,7 @@
     <TargetCulture>pt-BR</TargetCulture>
     <ProductName>Remag Plus</ProductName>
     <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -137,6 +137,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\frmImportarRais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmImportarRais.Designer.cs">
+      <DependentUpon>frmImportarRais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Importacao\Funcionario.cs" />
+    <Compile Include="Importacao\Line.cs" />
+    <Compile Include="Importacao\LineItem.cs" />
+    <Compile Include="Importacao\ReadRais.cs" />
+    <Compile Include="Importacao\StringExtensions.cs" />
     <Compile Include="Formularios\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +206,18 @@
     </Compile>
     <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisaFuncionario.Designer.cs">
+      <DependentUpon>frmPesquisaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPreencheTabelas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPreencheTabelas.Designer.cs">
+      <DependentUpon>frmPreencheTabelas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmResponsavel.cs">
       <SubType>Form</SubType>
@@ -321,6 +344,12 @@
     <Compile Include="Report\RptSalarioMinimo.Designer.cs">
       <DependentUpon>RptSalarioMinimo.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelecaoFuncionario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelecaoFuncionario.Designer.cs">
+      <DependentUpon>SelecaoFuncionario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Formularios\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,8 +371,17 @@
     <EmbeddedResource Include="Formularios\frmGeraRemag.resx">
       <DependentUpon>frmGeraRemag.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmImportarRais.resx">
+      <DependentUpon>frmImportarRais.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPesquisaFuncionario.resx">
+      <DependentUpon>frmPesquisaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPreencheTabelas.resx">
+      <DependentUpon>frmPreencheTabelas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmResponsavel.resx">
       <DependentUpon>frmResponsavel.cs</DependentUpon>
@@ -418,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\RptSalarioMinimo.resx">
       <DependentUpon>RptSalarioMinimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelecaoFuncionario.resx">
+      <DependentUpon>SelecaoFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.Config">
       <SubType>Designer</SubType>
@@ -533,42 +574,42 @@
   <ItemGroup>
     <PublishFile Include="DevExpress.XtraNavBar.v10.1">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DotClassUserControls">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.Practices.EnterpriseLibrary.Common">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

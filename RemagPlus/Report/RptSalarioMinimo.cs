@@ -17,6 +17,7 @@ namespace RemagPlus.Report
         }
 
         public RptSalarioMinimo(List<remag_salario_minimo> salario)
+            :this()
         {
             this.bindingSourceSalarioMinimo.DataSource = salario;
         }

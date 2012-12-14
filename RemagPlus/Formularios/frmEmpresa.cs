@@ -22,6 +22,7 @@ namespace RemagPlus.Formularios
             this.bindingSourceEmpresa.DataSource = dataContext.remag_empresa.FirstOrDefault(e => e.empresa_id == Globals.Empresa.empresa_id);
         }
 
+        #region Pesquisa
         protected override void Pesquisa()
         {
             Pesquisa<remag_empresa> pesquisa = new Pesquisa<remag_empresa>(dataContext, "remag_empresa", new string[] { "cnpj", "razao_social" }, new int[] { 100, 250 }, new string[] { "CNPJ", "Razão Social" }, "Empresa",true);
@@ -30,12 +31,12 @@ namespace RemagPlus.Formularios
                 if (pesquisa._entity != null)
                 {
                     this.bindingSourceEmpresa.DataSource = pesquisa._entity;
+                    base.HabilitarDesabilitaBotoes();
                 }
                 pesquisa.Close();
             }
         }
-
-
+        #endregion
 
         #region Configura Binding Source
         private void ConfiguraBindingSource()
@@ -60,6 +61,7 @@ namespace RemagPlus.Formularios
         }
         #endregion
 
+        #region Validação
         private bool IsValid(remag_empresa empresa)
         {
             List<string> mensagens = new List<string>();
@@ -110,6 +112,7 @@ namespace RemagPlus.Formularios
             }
             return valido;
         }
+        #endregion
 
         private void frmEmpresa_Load(object sender, EventArgs e)
         {

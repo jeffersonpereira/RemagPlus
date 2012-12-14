@@ -11,22 +11,12 @@ namespace RemagPlus.Classes
     public static class Globals
     {
 
-        public static remag_empresa Empresa { get; internal set; }
-
-        private static DataEntities _dataContext;
-        public static DataEntities DataContext
-        {
-            get 
-            {
-                if (_dataContext == null)
-                {
-                    _dataContext = new DataEntities();
-                }
-                return _dataContext;
-            }
-        }
-
+        public static remag_empresa Empresa { get; set; }
         public static remag_usuario UsuarioAtual { get; set; }
+        public static bool IsDemo 
+        { 
+            get { return true; } 
+        }
 
         public static List<ComboPreenchido> CodigoRecolhimento
         {

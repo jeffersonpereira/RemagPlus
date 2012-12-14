@@ -14,7 +14,7 @@ namespace RemagLib
         public string Senha
         {
             get { return _novaSenha; }
-            set { _novaSenha = Security.Encrypt(value, true); }
+            set { this.senha = Security.Encrypt(value, true); }
         }
     }
 

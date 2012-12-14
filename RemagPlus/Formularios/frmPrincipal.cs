@@ -31,7 +31,10 @@ namespace RemagPlus
 
         private void UpdateNameBusiness()
         {
-            this.toolStripStatusLabel1.Text = Globals.Empresa.razao_social;
+            if (Globals.Empresa != null)
+            {
+                this.toolStripStatusLabel1.Text = Globals.Empresa.razao_social;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -175,6 +178,12 @@ namespace RemagPlus
         {
             frmUsuario usuario = new frmUsuario();
             usuario.ShowDialog();
+        }
+
+        private void importarRAIS2011ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmImportarRais form = new frmImportarRais();
+            form.ShowDialog();
         }
 
       }

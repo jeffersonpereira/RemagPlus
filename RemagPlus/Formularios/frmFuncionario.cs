@@ -117,6 +117,31 @@ namespace RemagPlus.Formularios
             }
         }
 
+        protected override void Salvar()
+        {
+            List<string> erros = GetErros();
+            if (erros == null || erros.Count == 0)
+            {
+                remag_funcionario funcionario = this.bindingSourceFuncionario.Current as remag_funcionario;
+                funcionario.remag_empresa = dataContext.remag_empresa.First(f => f.empresa_id == Globals.Empresa.empresa_id);
+                if (dataContext.SaveChanges() > 0)
+                {
+                    MessageBox.Show("Registro salvo com sucesso!", RemagPlus.Classes.Mensagens.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    HabilitarDesabilitaBotoes();
+                }
+            }
+            else
+            {
+                string msg = string.Empty;
+                foreach (string erro in erros)
+                {
+                    msg += erro + "\n";
+                }
+                MessageBox.Show(msg, RemagPlus.Classes.Mensagens.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
+        }
+
+
         protected override List<string>  GetErros()
         {
             List<string> mensagens = new List<string>();
@@ -162,21 +187,20 @@ namespace RemagPlus.Formularios
             {
                 mensagens.Add("Você informou uma movimentação, mas não informou uma data de movimentação.");
             }
-            if (funcionario.Movimentacao == null && funcionario.data_demissao.HasValue)
-            {
-                mensagens.Add("Você informou uma data  de movimentação, mas não informou uma movimentação.");
-            }
-            if (dataContext.remag_funcionario.Any(f => f.pis == funcionario.pis && f.empresa_id == Globals.Empresa.empresa_id))
+            if (dataContext.remag_funcionario.Any(f => f.funcionario_id != funcionario.funcionario_id && f.pis == funcionario.pis && f.empresa_id == Globals.Empresa.empresa_id))
             {
                 mensagens.Add("Já existe um funcionário com este PIS.");
+            }
+            if (Globals.IsDemo && dataContext.remag_funcionario.Count() > 3)
+            {
+                mensagens.Add("Esta é uma versão de demosntração.\n Limite de 3 funcionários.");
             }
             return mensagens;
         }
 
         private bool IsValores(remag_funcionario funcionario)
         {
-            return Globals.DataContext.remag_individualizacao.FirstOrDefault(i => i.funcionario_id == funcionario.funcionario_id)!=null;
+            return dataContext.remag_individualizacao.FirstOrDefault(i => i.funcionario_id == funcionario.funcionario_id) != null;
         }
-
     }
 }

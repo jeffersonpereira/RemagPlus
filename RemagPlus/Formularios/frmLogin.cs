@@ -13,15 +13,18 @@ namespace RemagPlus.Formularios
 {
     public partial class frmLogin : Form
     {
+        DataEntities dataContext;
         public frmLogin()
         {
             InitializeComponent();
+            dataContext = new DataEntities();
         }
         int tentativas=3;
         private void button1_Click(object sender, EventArgs e)
         {
+            CriarDB();
             string mensagem = string.Empty;
-            if (Security.IsAutenticate(Globals.DataContext,this.textBoxLogin.Text, this.textBoxSenha.Text, out mensagem) && this.DialogResult == DialogResult.OK)
+            if (Security.IsAutenticate(dataContext, this.textBoxLogin.Text, this.textBoxSenha.Text, out mensagem) && this.DialogResult == DialogResult.OK)
             {
                   MessageBox.Show(mensagem, Mensagens.Titulo);
             }
@@ -35,6 +38,20 @@ namespace RemagPlus.Formularios
             {
                 this.DialogResult = DialogResult.No;
                 MessageBox.Show("Não foi possível realizar a autenticação.", Mensagens.Titulo);
+            }
+        }
+
+        private void CriarDB()
+        {
+            if (!dataContext.DatabaseExists())
+            {
+                MessageBox.Show("Banco de dados não existe.\nAguarde enquanto o sistema cria obanco de dados e preenche as tabelas padrões.", Mensagens.Titulo,MessageBoxButtons.OK,MessageBoxIcon.Information);
+                dataContext.CreateDatabase();
+                frmPreencheTabelas form = new frmPreencheTabelas(dataContext);
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    dataContext.CriarDadosPadroes();
+                }
             }
         }
     }

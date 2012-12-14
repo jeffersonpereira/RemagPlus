@@ -63,6 +63,9 @@
             this.sEFIPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remag422ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.importarRAIS2011ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importarSEFIPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.configuraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.versãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -349,6 +352,9 @@
             this.sEFIPToolStripMenuItem,
             this.remag422ToolStripMenuItem,
             this.toolStripSeparator4,
+            this.importarRAIS2011ToolStripMenuItem,
+            this.importarSEFIPToolStripMenuItem,
+            this.toolStripSeparator5,
             this.configuraçãoToolStripMenuItem});
             this.utilitárioToolStripMenuItem.Name = "utilitárioToolStripMenuItem";
             this.utilitárioToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
@@ -357,26 +363,45 @@
             // sEFIPToolStripMenuItem
             // 
             this.sEFIPToolStripMenuItem.Name = "sEFIPToolStripMenuItem";
-            this.sEFIPToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.sEFIPToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.sEFIPToolStripMenuItem.Text = "SEFIP";
             this.sEFIPToolStripMenuItem.Click += new System.EventHandler(this.SEFIPToolStripMenuItem_Click);
             // 
             // remag422ToolStripMenuItem
             // 
             this.remag422ToolStripMenuItem.Name = "remag422ToolStripMenuItem";
-            this.remag422ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.remag422ToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.remag422ToolStripMenuItem.Text = "Remag 4.2.2";
             this.remag422ToolStripMenuItem.Click += new System.EventHandler(this.remag422ToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(171, 6);
+            // 
+            // importarRAIS2011ToolStripMenuItem
+            // 
+            this.importarRAIS2011ToolStripMenuItem.Name = "importarRAIS2011ToolStripMenuItem";
+            this.importarRAIS2011ToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.importarRAIS2011ToolStripMenuItem.Text = "Importar RAIS 2011";
+            this.importarRAIS2011ToolStripMenuItem.Click += new System.EventHandler(this.importarRAIS2011ToolStripMenuItem_Click);
+            // 
+            // importarSEFIPToolStripMenuItem
+            // 
+            this.importarSEFIPToolStripMenuItem.Enabled = false;
+            this.importarSEFIPToolStripMenuItem.Name = "importarSEFIPToolStripMenuItem";
+            this.importarSEFIPToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.importarSEFIPToolStripMenuItem.Text = "Importar SEFIP";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(171, 6);
             // 
             // configuraçãoToolStripMenuItem
             // 
             this.configuraçãoToolStripMenuItem.Name = "configuraçãoToolStripMenuItem";
-            this.configuraçãoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.configuraçãoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.configuraçãoToolStripMenuItem.Text = "Configuração";
             this.configuraçãoToolStripMenuItem.Click += new System.EventHandler(this.configuraçãoToolStripMenuItem_Click);
             // 
@@ -454,7 +479,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
-            this.Text = "Remag Plus versão 1.0";
+            this.Text = "Remag Plus versão 1.1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -512,6 +537,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripMenuItem importarRAIS2011ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importarSEFIPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
     }
 }
 

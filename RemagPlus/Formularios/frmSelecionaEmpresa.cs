@@ -28,7 +28,7 @@ namespace RemagPlus.Formularios
 
         private void Empresas()
         {
-            this.comboBox1.DataSource = Globals.DataContext.remag_empresa.Where(e => e.empresa_id > 0);
+            this.comboBox1.DataSource = new DataEntities().remag_empresa.ToList();
             this.comboBox1.DisplayMember = "razao_social";
         }
 

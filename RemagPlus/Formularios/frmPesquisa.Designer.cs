@@ -77,7 +77,7 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Image = global::RemagPlus.Properties.Resources.find;
-            this.btnPesquisar.Location = new System.Drawing.Point(293, 19);
+            this.btnPesquisar.Location = new System.Drawing.Point(323, 18);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(45, 23);
             this.btnPesquisar.TabIndex = 1;
@@ -86,9 +86,9 @@
             // 
             // textBoxValorPesquisa
             // 
-            this.textBoxValorPesquisa.Location = new System.Drawing.Point(17, 19);
+            this.textBoxValorPesquisa.Location = new System.Drawing.Point(6, 19);
             this.textBoxValorPesquisa.Name = "textBoxValorPesquisa";
-            this.textBoxValorPesquisa.Size = new System.Drawing.Size(270, 20);
+            this.textBoxValorPesquisa.Size = new System.Drawing.Size(311, 20);
             this.textBoxValorPesquisa.TabIndex = 0;
             // 
             // panel1
@@ -150,6 +150,7 @@
             // 
             // frmPesquisa
             // 
+            this.AcceptButton = this.btnPesquisar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 367);

@@ -37,6 +37,12 @@ namespace RemagPlus
         }
         private void Individualizar(DateTime competencia,DateTime recolhimento)
         {
+            if (Globals.IsDemo && dataContext.remag_individualizacao.Any())
+            {
+                MessageBox.Show("Esta é uma versão de demonstração, não é possível individualizar mais de uma competência.", Mensagens.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             decimal totalRemuneracao;
             IList<remag_funcionario> funcionario = dataContext.GetFuncionarioDados(Globals.Empresa, competencia.ToLastDay(), out totalRemuneracao);
             this.progressBar1.Maximum = funcionario.Count;
@@ -51,8 +57,8 @@ namespace RemagPlus
             foreach (remag_funcionario f in funcionario.ToList())
             {
                 decimal jam = decimal.Zero;
-                decimal deposito=decimal.Zero;
-                decimal deposito13=decimal.Zero;
+                decimal deposito = decimal.Zero;
+                decimal deposito13 = decimal.Zero;
                 decimal base_calc = decimal.Zero;
                 if (this.radioButtonNormal.Checked)
                 {
@@ -121,12 +127,12 @@ namespace RemagPlus
                 }
                 AddIndivividualizacao(f, jam, deposito, deposito13, base_calc, this.radioButtonSalarioMinimo.Checked, this.radioButtonRateio.Checked, this.radioButtonNormal.Checked, competencia.ToString("MM/yyyy"), recolhimento);
                 ListViewItem item = this.listView1.Items.Add(f.pis);
-                    item.SubItems.Add(f.nome);
-                    item.SubItems.Add(jam.ToString("c"));
-                    item.SubItems.Add(deposito.ToString("c"));
-                    item.SubItems.Add(deposito13.ToString("c"));
+                item.SubItems.Add(f.nome);
+                item.SubItems.Add(jam.ToString("c"));
+                item.SubItems.Add(deposito.ToString("c"));
+                item.SubItems.Add(deposito13.ToString("c"));
                 this.progressBar1.Value = controle;
-                 controle++;
+                controle++;
             }
             if (dataContext.SaveChanges() > 0)
             {
@@ -169,6 +175,12 @@ namespace RemagPlus
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (Globals.IsDemo)
+            {
+                MessageBox.Show("Esta ação não está habilitda para esta versão.", "Remag Plus", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DateTime competencia;
             DateTime recolhimento;
             if (DateTime.TryParse(this.txtCompetencia.Text, out competencia) && DateTime.TryParse(this.TextBoxRecolhimento.Text, out recolhimento))
